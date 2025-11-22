@@ -1,0 +1,13 @@
+{
+  "name": "ai-timetable-manager",
+  "version": "1.0.0",
+  "description": "AI-Based Institute Timetable Management System",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -c-1 -p 8000"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

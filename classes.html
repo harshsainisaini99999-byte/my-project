@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Classes Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">AI Time Table Manager</div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="teachers.html" class="nav-link">Teachers</a>
+        <a href="subjects.html" class="nav-link">Subjects</a>
+        <a href="classes.html" class="nav-link active" aria-current="page">Classes</a>
+        <a href="timetable.html" class="nav-link">Timetable</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- Top Bar -->
+      <header class="topbar">
+        <h1 class="page-title">Classes Management</h1>
+        <div class="user-avatar" title="User Avatar"></div>
+      </header>
+
+      <section class="container">
+        <h1>Add Class</h1>
+        <input id="className" placeholder="Class Name (e.g., 9A)" class="neon-input" />
+      
+        <button onclick="addClass()" class="btn neon-btn">Add Class</button>
+
+        <h2>Classes List</h2>
+        <table class="neon-table" id="classesTable"></table>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

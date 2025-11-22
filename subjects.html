@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Subjects Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">AI Time Table Manager</div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="teachers.html" class="nav-link">Teachers</a>
+        <a href="subjects.html" class="nav-link active" aria-current="page">Subjects</a>
+        <a href="classes.html" class="nav-link">Classes</a>
+        <a href="timetable.html" class="nav-link">Timetable</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- Top Bar -->
+      <header class="topbar">
+        <h1 class="page-title">Subjects Management</h1>
+        <div class="user-avatar" title="User Avatar"></div>
+      </header>
+
+      <section class="container">
+        <h1>Add Subject</h1>
+        <input id="sName" placeholder="Subject Name" class="neon-input" />
+        <select id="teacherSelect" class="neon-input"></select>
+        <input id="weeklyHours" type="number" placeholder="Weekly Hours" class="neon-input" />
+
+        <button onclick="addSubject()" class="btn neon-btn">Add</button>
+
+        <h2>Subjects List</h2>
+        <table class="neon-table" id="subjectsTable"></table>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
