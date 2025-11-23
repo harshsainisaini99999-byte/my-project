@@ -162,11 +162,22 @@ body, html {
   letter-spacing: 1px;
   box-shadow: 0 0 20px #6da3ffbb;
   transition: all 0.3s ease;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .btn:hover, .neon-btn:hover {
   box-shadow: 0 0 35px #92bbffdd, 0 0 45px #92bbffdd;
   transform: translateY(-3px);
+}
+
+/* Button wrapper */
+.button-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start; /* left aligned, can be changed to center or flex-end */
+  gap: 15px; /* space between buttons if multiple */
 }
 
 /* Inputs */

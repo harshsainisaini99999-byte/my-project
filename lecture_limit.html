@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Subjects Management</title>
+  <title>Lecture Limit Management</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
@@ -14,10 +14,10 @@
       <nav class="sidebar-nav">
         <a href="index.html" class="nav-link">Dashboard</a>
         <a href="teachers.html" class="nav-link">Teachers</a>
-        <a href="subjects.html" class="nav-link active" aria-current="page">Subjects</a>
+        <a href="subjects.html" class="nav-link">Subjects</a>
         <a href="classes.html" class="nav-link">Classes</a>
         <a href="timetable.html" class="nav-link">Timetable</a>
-        <a href="lecture_limit.html" class="nav-link">Lecture Limit</a>
+        <a href="lecture_limit.html" class="nav-link active" aria-current="page">Lecture Limit</a>
         <a href="lecture_schedule.html" class="nav-link">Lecture Schedule</a>
       </nav>
     </aside>
@@ -26,26 +26,30 @@
     <div class="main-content">
       <!-- Top Bar -->
       <header class="topbar">
-        <h1 class="page-title">Subjects Management</h1>
+        <h1 class="page-title">Lecture Limit Management</h1>
         <div class="user-avatar" title="User Avatar"></div>
       </header>
 
       <section class="container">
-        <h1>Add Subject</h1>
-        <input id="sName" placeholder="Subject Name" class="neon-input" />
-        <select id="teacherSelect" class="neon-input"></select>
+        <h1>Add Lecture Limit</h1>
+        <label for="classSelect">Select Class:</label>
+        <select id="classSelect" class="neon-input"></select>
 
-        <div class="button-wrapper">
-          <button onclick="addSubject()" class="btn neon-btn">Add</button>
-        </div>
+        <label for="teacherSelectLimit">Select Teacher:</label>
+        <select id="teacherSelectLimit" class="neon-input"></select>
 
-        <h2>Subjects List</h2>
-        <table class="neon-table" id="subjectsTable">
+        <label for="weeklyLimit">Weekly Lecture Limit:</label>
+        <input id="weeklyLimit" type="number" min="1" class="neon-input" placeholder="Enter lecture limit per week" />
+
+        <button onclick="addLectureLimit()" class="btn neon-btn">Add Limit</button>
+
+        <h2>Existing Lecture Limits</h2>
+        <table class="neon-table" id="lectureLimitsTable">
           <thead>
             <tr>
-              <th>Name</th>
+              <th>Class</th>
               <th>Teacher</th>
-              <th>Weekly Hours</th>
+              <th>Weekly Limit</th>
               <th>Actions</th>
             </tr>
           </thead>
